@@ -10,7 +10,7 @@
 	height: "1dp",
 	width: Ti.UI.FILL,
 	backgroundColor: "#000",
-	opacity: 0.2
+	opacity: 0.5
 }
 "#overlay": {
 	height: Ti.UI.FILL,
