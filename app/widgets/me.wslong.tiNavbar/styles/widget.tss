@@ -1,0 +1,32 @@
+"#wrapper": {
+	top: "0dp",
+	left: "0dp",
+	width: Ti.UI.FILL,
+	height: "47dp",
+	backgroundColor: "#000"
+}
+"#border": {
+	bottom: "0dp",
+	height: "1dp",
+	width: Ti.UI.FILL,
+	backgroundColor: "#000",
+	opacity: 0.2
+}
+"#overlay": {
+	height: Ti.UI.FILL,
+	width: Ti.UI.FILL,
+	left: "0dp",
+	top: "0dp"
+}
+"#left": {
+	top: "0dp",
+	left: "0dp",
+	width: "48dp",
+	height: "47dp"
+}
+"#right": {
+	top: "0dp",
+	right: "0dp",
+	width: "48dp",
+	height: "47dp"
+}

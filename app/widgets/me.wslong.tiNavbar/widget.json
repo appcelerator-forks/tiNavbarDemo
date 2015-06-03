@@ -1,0 +1,13 @@
+{
+	"id": "me.wslong.tiNavbar",
+	"name": "tiNavbar",
+	"description": "Provide the common navigation bar layout for cross-platform environments.",
+	"author": "Shallong",
+	"version": "1.0",
+	"copyright": "2015 Shallong",
+	"license": "Apache License, Version 2.0",
+	"min-alloy-version": "1.1",
+	"min-titanium-version": "3.0",
+	"tags": "navigationbar, cross-platform",
+	"platforms": "android,ios,mobileweb"
+}

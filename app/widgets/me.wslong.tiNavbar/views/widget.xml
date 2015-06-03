@@ -1,0 +1,10 @@
+<Alloy>
+	<View id="wrapper">
+		<View id="overlay">
+			<View id="titleView" />
+			<View id="left" visible="false" />
+			<View id="right" visible="false" />
+		</View>
+		<View id="border" />
+	</View>
+</Alloy>
