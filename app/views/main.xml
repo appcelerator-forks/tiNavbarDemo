@@ -4,7 +4,7 @@
     <View class="wrapper">
       <Label id="label1" onClick="doClick1">Normal Window</Label>
       <Label id="label2" onClick="doClick2">Text Action Window</Label>
-  		<Label id="label3" onClick="doClick3"></Label>
+  		<Label id="label3" onClick="doClick3">Try to change the Window title</Label>
     </View>
 	</Window>
 </Alloy>

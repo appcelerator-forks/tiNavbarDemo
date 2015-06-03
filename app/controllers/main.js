@@ -16,7 +16,7 @@ function doClick2(e) {
     text = null;
 }
 function doClick3(e) {
-    
+    $.navbar.setTitle("changed");
 }
 
 $.main.open();

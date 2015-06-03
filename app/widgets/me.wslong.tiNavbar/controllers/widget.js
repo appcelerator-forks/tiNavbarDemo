@@ -50,7 +50,7 @@ $.init = function(args) {
 			bottom: "10dp",
 			preventDefaultImage: true
 		});
-	} else if (titleText) {
+	} else {
 		titleView = Ti.UI.createLabel({
 			top: "0dp",
 			left: "58dp",
@@ -69,6 +69,13 @@ $.init = function(args) {
 	if(titleView) {
 		$.titleView.add(titleView);
 	}
+}
+
+$.setTitle = function(text) {
+	var c = $.titleView.getChildren();
+	if (c && c[0]) {
+		c[0].text = text;
+	};
 }
 
 /**
