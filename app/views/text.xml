@@ -1,0 +1,8 @@
+<Alloy>
+  <Window id="text" class="container">
+    <Require type="widget" src="me.wslong.tiNavbar" id="navbar"/>
+    <View class="innerContainerTop">
+      <Label>it's text action window</Label>
+    </View>
+  </Window>
+</Alloy>

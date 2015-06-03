@@ -1,0 +1,8 @@
+<Alloy>
+
+  <!-- iPhone -->
+  <NavigationWindow id="iosNav">
+    <Require src="main" id="main"/>
+  </NavigationWindow>
+
+</Alloy>

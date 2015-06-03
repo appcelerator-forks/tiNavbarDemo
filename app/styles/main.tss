@@ -1,0 +1,18 @@
+".wrapper":{
+  layout:"vertical",
+  width:Ti.UI.SIZE,
+  height:Ti.UI.SIZE,
+  center:{x:"50%",y:"50%"}
+}
+
+"Label": {
+	width: Ti.UI.SIZE,
+	height: Ti.UI.SIZE,
+	color: "#000"
+}
+
+"#label": {
+	font: {
+		fontSize: 12
+	}
+}

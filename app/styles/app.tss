@@ -1,0 +1,16 @@
+"Window":{
+  navBarHidden: true,
+  height: "100%",
+  width: "100%"
+}
+".container": {
+  backgroundColor:"white",
+  height: "100%",
+  width: "100%",
+}
+".innerContainerTop":{
+  top: 47
+}
+".innerContainerTop[platform=ios]":{
+  top: 67
+}

@@ -1,0 +1,8 @@
+<Alloy>
+  <Window id="normal" class="container">
+    <Require type="widget" src="me.wslong.tiNavbar" id="navbar"/>
+    <View class="innerContainerTop">
+      <Label>it's normal window</Label>
+    </View>
+  </Window>
+</Alloy>
