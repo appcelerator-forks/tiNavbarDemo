@@ -73,6 +73,8 @@ For Android, need to specify the **NO ActionBar theme** to be able to use this n
 	- backgroundColor : set the title background (Optional)
 	- borderColor : set the title border color, the same with title background by default
 	- theme : set the theme, "black" or "white", to be used when choosing widegt-provided icons
+* setTitle
+	- text : the tile to be updated, will have no effect for the title with image setting
 * showLeft
 	- text : set the text if has, this is the first judgement
 	- image : set the image if has, this is the seconde judgement, otherwise using the default "back" icon
