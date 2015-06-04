@@ -96,10 +96,11 @@ $.showLeft = function(_params) {
 		showLeftCallback = _params.callback;
 		var text = _params.text;
 		var image = _params.image;
+		var activeImage = _params.activeImage;
 		if (text) {
 			$.left.add(createNavbarText(text));
 		} else if (image) {
-			$.left.add(createNavbarImage(image));
+			$.left.add(createNavbarImage(image, activeImage));
 		} else {
 			var defaultImage = (theme == "white" ? WPATH("/images/white/back.png") : WPATH("/images/black/back.png"));
 			$.left.add(createNavbarImage(defaultImage));
@@ -125,10 +126,11 @@ $.showRight = function(_params) {
 		showRightCallback = _params.callback;
 		var text = _params.text;
 		var image = _params.image;
+		var activeImage = _params.activeImage;
 		if (text) {
 			$.right.add(createNavbarText(text));
 		} else if (image) {
-			$.right.add(createNavbarImage(image));
+			$.right.add(createNavbarImage(image, activeImage));
 		} else {
 			var defaultImage = (theme == "white" ? WPATH("/images/white/next.png") : WPATH("/images/black/next.png"));
 			$.right.add(createNavbarImage(defaultImage));
@@ -208,8 +210,10 @@ $.showAction = function(_callback) {
 	}
 };
 
-function createNavbarImage(img) {
-	return Ti.UI.createImageView({
+function createNavbarImage(img, activeImg) {
+	var imgView = Ti.UI.createImageView({
+		_origin: img,
+		_active: activeImg,
 		image: img,
 		height: "28dp",
 		width: Ti.UI.SIZE,
@@ -217,10 +221,19 @@ function createNavbarImage(img) {
 		left: "9dp",
 		preventDefaultImage: true
 	});
+	if (activeImg) {
+		imgView.addEventListener('touchstart', function(){
+			imgView.image = imgView._active;
+		});
+		imgView.addEventListener('touchend', function(){
+			imgView.image = imgView._origin;
+		});
+	};
+	return imgView;
 }
 
 function createNavbarText(txt) {
-	var lbl = Ti.UI.createLabel({
+	var lblView = Ti.UI.createLabel({
 		top: "9dp",
 		height: "28dp",
 		width: Ti.UI.SIZE,
@@ -233,13 +246,13 @@ function createNavbarText(txt) {
 		textAlign: "center",
 		text: txt
 	});
-	lbl.addEventListener('touchstart', function() {
-		lbl.opacity = 0.4;
+	lblView.addEventListener('touchstart', function() {
+		lblView.opacity = 0.4;
 	});
-	lbl.addEventListener('touchend', function() {
-		lbl.opacity = 1.0;
+	lblView.addEventListener('touchend', function() {
+		lblView.opacity = 1.0;
 	});
-	return lbl;
+	return lblView;
 }
 
 /**
