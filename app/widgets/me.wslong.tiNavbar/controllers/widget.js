@@ -80,6 +80,22 @@ $.setTitle = function(text) {
 	};
 }
 
+$.hideLeft = function() {
+	if (showLeftCallback) {
+		$.left.removeEventListener('touchend', showLeftCallback);
+		showLeftCallback = null;
+	};
+	$.left.removeAllChildren();
+};
+
+$.hideRight = function() {
+	if (showRightCallback) {
+		$.right.removeEventListener('touchend', showRightCallback);
+		showRightCallback =  null;
+	};
+	$.right.removeAllChildren();
+};
+
 /**
  * Shows the left button
  * @param {Object} _params
@@ -90,6 +106,7 @@ $.showLeft = function(_params) {
 	if(_params && typeof _params.callback !== "undefined") {
 		if (showLeftCallback) {
 			$.left.removeEventListener('touchend', showLeftCallback);
+			showLeftCallback = null;
 		};
 		$.left.removeAllChildren();
 
@@ -120,6 +137,7 @@ $.showRight = function(_params) {
 	if(_params && typeof _params.callback !== "undefined") {
 		if (showRightCallback) {
 			$.right.removeEventListener('touchend', showRightCallback);
+			showRightCallback = null;
 		};
 		$.right.removeAllChildren();
 
