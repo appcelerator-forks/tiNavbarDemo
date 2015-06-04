@@ -104,6 +104,9 @@ For Android, need to specify the **NO ActionBar theme** to be able to use this n
 ## Changelog
 
 * 1.1 - Bug fix and improve the demo project
+	- add 'activeImage' parameter in `showLeft` and `showRight` API methods
+	- new `hideLeft` API method
+	- new `hideRight` API method
 * 1.0 - init version
 
 
