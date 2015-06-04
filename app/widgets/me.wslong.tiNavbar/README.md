@@ -65,7 +65,7 @@ For Android, need to specify the **NO ActionBar theme** to be able to use this n
 
 #### API
 
-* init
+* `init`
 	- titleImage : set the title image if set, otherwise title text
 	- titleText : set the title text, empty by default
 	- titleColor : set the title color (Optional)
@@ -73,26 +73,30 @@ For Android, need to specify the **NO ActionBar theme** to be able to use this n
 	- backgroundColor : set the title background (Optional)
 	- borderColor : set the title border color, the same with title background by default
 	- theme : set the theme, "black" or "white", to be used when choosing widegt-provided icons
-* setTitle
+* `setTitle`
 	- text : the tile to be updated, will have no effect for the title with image setting
-* showLeft
+* `showLeft`
 	- text : set the text if has, this is the first judgement
 	- image : set the image if has, this is the seconde judgement, otherwise using the default "back" icon
 	- callback
-* showRight
+	- activeImage : set the active image when the image is touched
+* `showRight`
 	- text : set the text if has, this is the first judgement
 	- image : set the image if has, this is the seconde judgement, otherwise using the default "next" icon
 	- callback
-* showBack : use the default "back" icon
+	- activeImage : set the active image when the image is touched
+* `showBack` : use the default "back" icon
 	- callback
-* showNext : use the default "next" icon
+* `showNext` : use the default "next" icon
 	- callback
-* showMenu : use the default "menu" icon
+* `showMenu` : use the default "menu" icon
 	- callback
-* showSetting : use the default "setting" icon
+* `showSettings` : use the default "settings" icon
 	- callback
-* showAction : use the default "action" icon
+* `showAction` : use the default "action" icon
 	- callback
+* `hideLeft` : be able to hide the left navigation bar item
+* `hideRight` : be able to hide the right navigation bar item
 
 
 ## Plan
@@ -103,7 +107,7 @@ For Android, need to specify the **NO ActionBar theme** to be able to use this n
 
 ## Changelog
 
-* 1.1 - Bug fix and improve the demo project
+* 1.1 - Add 2 new API methods, update `showLeft` and `showRight` API methods, bug fix, demo project improvements
 	- add 'activeImage' parameter in `showLeft` and `showRight` API methods
 	- new `hideLeft` API method
 	- new `hideRight` API method
