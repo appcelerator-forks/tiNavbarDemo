@@ -118,9 +118,9 @@ $.showLeft = function(_params) {
 $.showRight = function(_params) {
 	if(_params && typeof _params.callback !== "undefined") {
 		if (showRightCallback) {
-			$.left.removeEventListener('touchend', showRightCallback);
+			$.right.removeEventListener('touchend', showRightCallback);
 		};
-		$.left.removeAllChildren();
+		$.right.removeAllChildren();
 
 		showRightCallback = _params.callback;
 		var text = _params.text;
