@@ -103,6 +103,7 @@ For Android, need to specify the **NO ActionBar theme** to be able to use this n
 
 ## Changelog
 
+* 1.1 - Bug fix and improve the demo project
 * 1.0 - init version
 
 

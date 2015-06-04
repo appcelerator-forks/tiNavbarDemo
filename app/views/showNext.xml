@@ -1,8 +1,8 @@
 <Alloy>
-  <Window id="text" class="container">
+  <Window id="showNext" class="container">
     <Require type="widget" src="me.wslong.tiNavbar" id="navbar"/>
     <View class="innerContainerTop">
-      <Label>it's text action window</Label>
+      <Label>SHOW NEXT</Label>
     </View>
   </Window>
 </Alloy>

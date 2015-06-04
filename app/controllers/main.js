@@ -5,18 +5,30 @@ $.navbar.init({
   backgroundColor : "#35ABFF"
 });
 
-function doClick1(e) {
-    var normal = Alloy.createController('normal').getView();
-    Alloy.Globals.open(normal);
-    normal = null;
+function showBack() {
+    var target = Alloy.createController('showBack').getView();
+    Alloy.Globals.open(target);
+    target = null;
 }
-function doClick2(e) {
-    var text = Alloy.createController('text').getView();
-    Alloy.Globals.open(text);
-    text = null;
+function showNext() {
+    var target = Alloy.createController('showNext').getView();
+    Alloy.Globals.open(target);
+    target = null;
 }
-function doClick3(e) {
-    $.navbar.setTitle("changed");
+function showMenu() {
+    var target = Alloy.createController('showMenu').getView();
+    Alloy.Globals.open(target);
+    target = null;
+}
+function showSettings() {
+  var target = Alloy.createController('showSettings').getView();
+    Alloy.Globals.open(target);
+    target = null;
+}
+function showAction() {
+  var target = Alloy.createController('showAction').getView();
+    Alloy.Globals.open(target);
+    target = null;
 }
 
 $.main.open();

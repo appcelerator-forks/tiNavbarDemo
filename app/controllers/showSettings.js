@@ -1,18 +1,16 @@
 exports.cleanAndDestroy = cleanAndDestroy;
 
 function cleanAndDestroy() {
-  $.text.close();
+  $.showSettings.close();
   $.destroy();
 };
 
 // inti the navbar
 $.navbar.init({
-  titleText : "Text Action",
+  titleText : "Show Settings Window",
   titleColor : "black",
-  backgroundColor : "green"
+  backgroundColor : "green",
+  theme: 'black'
 });
 
-$.navbar.showLeft({
-  text: "取消",
-  callback: cleanAndDestroy
-});
+$.navbar.showSettings(cleanAndDestroy);

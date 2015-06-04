@@ -1,16 +1,16 @@
 exports.cleanAndDestroy = cleanAndDestroy;
 
 function cleanAndDestroy() {
-  $.normal.close();
+  $.showBack.close();
   $.destroy();
 };
 
 // inti the navbar
 $.navbar.init({
-  titleText : "Normal Window",
+  titleText : "Show Back Window",
   titleColor : "black",
-  backgroundColor : "red"
+  backgroundColor : "red",
+  theme: 'black'
 });
 
 $.navbar.showBack(cleanAndDestroy);
-$.navbar.showNext(cleanAndDestroy);

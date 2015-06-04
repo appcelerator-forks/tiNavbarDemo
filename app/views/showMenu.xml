@@ -1,0 +1,8 @@
+<Alloy>
+  <Window id="showMenu" class="container">
+    <Require type="widget" src="me.wslong.tiNavbar" id="navbar"/>
+    <View class="innerContainerTop">
+      <Label>SHOW MENU</Label>
+    </View>
+  </Window>
+</Alloy>

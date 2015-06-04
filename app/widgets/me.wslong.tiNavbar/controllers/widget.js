@@ -9,7 +9,9 @@ var titleView,
 		backgroundColor,
 		borderColor,
 		theme,
-		deviceVersion = parseInt(Titanium.Platform.version.split(".")[0], 10);
+		deviceVersion = parseInt(Titanium.Platform.version.split(".")[0], 10),
+		showLeftCallback,
+		showRightCallback;
 
 /**
  * Init the widget
@@ -86,6 +88,12 @@ $.setTitle = function(text) {
  */
 $.showLeft = function(_params) {
 	if(_params && typeof _params.callback !== "undefined") {
+		if (showLeftCallback) {
+			$.left.removeEventListener('touchend', showLeftCallback);
+		};
+		$.left.removeAllChildren();
+
+		showLeftCallback = _params.callback;
 		var text = _params.text;
 		var image = _params.image;
 		if (text) {
@@ -97,7 +105,7 @@ $.showLeft = function(_params) {
 			$.left.add(createNavbarImage(defaultImage));
 		}
 		$.left.visible = true;
-		$.left.addEventListener("touchend", _params.callback);
+		$.left.addEventListener("touchend", showLeftCallback);
 	}
 };
 
@@ -109,6 +117,12 @@ $.showLeft = function(_params) {
  */
 $.showRight = function(_params) {
 	if(_params && typeof _params.callback !== "undefined") {
+		if (showRightCallback) {
+			$.left.removeEventListener('touchend', showRightCallback);
+		};
+		$.left.removeAllChildren();
+
+		showRightCallback = _params.callback;
 		var text = _params.text;
 		var image = _params.image;
 		if (text) {
@@ -120,7 +134,7 @@ $.showRight = function(_params) {
 			$.right.add(createNavbarImage(defaultImage));
 		}
 		$.right.visible = true;
-		$.right.addEventListener("touchend", _params.callback);
+		$.right.addEventListener("touchend", showRightCallback);
 	}
 };
 
@@ -131,9 +145,10 @@ $.showRight = function(_params) {
 $.showBack = function(_callback) {
 	if(_callback && typeof _callback !== "undefined") {
 		var image = (theme == "white" ? WPATH("/images/white/back.png") : WPATH("/images/black/back.png"));
-		$.left.add(createNavbarImage(image));
-		$.left.visible = true;
-		$.left.addEventListener("touchend", _callback);
+		$.showLeft({
+			image: image,
+			callback: _callback
+		});
 	}
 };
 
@@ -144,9 +159,10 @@ $.showBack = function(_callback) {
 $.showNext = function(_callback) {
 	if(_callback && typeof _callback !== "undefined") {
 		var image = (theme == "white" ? WPATH("/images/white/next.png") : WPATH("/images/black/next.png"));
-		$.right.add(createNavbarImage(image));
-		$.right.visible = true;
-		$.right.addEventListener("touchend", _callback);
+		$.showRight({
+			image: image,
+			callback: _callback
+		});
 	}
 };
 
@@ -157,9 +173,10 @@ $.showNext = function(_callback) {
 $.showMenu = function(_callback) {
 	if(_callback && typeof _callback !== "undefined") {
 		var image = (theme == "white" ? WPATH("/images/white/menu.png") : WPATH("/images/black/menu.png"));
-		$.left.add(createNavbarImage(image));
-		$.left.visible = true;
-		$.right.addEventListener("touchend", _callback);
+		$.showLeft({
+			image: image,
+			callback: _callback
+		});
 	}
 };
 
@@ -170,9 +187,10 @@ $.showMenu = function(_callback) {
 $.showSettings = function(_callback) {
 	if(_callback && typeof _callback !== "undefined") {
 		var image = (theme == "white" ? WPATH("/images/white/settings.png") : WPATH("/images/black/settings.png"));
-		$.right.add(createNavbarImage(image));
-		$.right.visible = true;
-		$.right.addEventListener("touchend", _callback);
+		$.showRight({
+			image: image,
+			callback: _callback
+		});
 	}
 };
 
@@ -183,9 +201,10 @@ $.showSettings = function(_callback) {
 $.showAction = function(_callback) {
 	if(_callback && typeof _callback !== "undefined") {
 		var image = (theme == "white" ? WPATH("/images/white/action.png") : WPATH("/images/black/action.png"));
-		$.right.add(createNavbarImage(image));
-		$.right.visible = true;
-		$.right.addEventListener("touchend", _callback);
+		$.showRight({
+			image: image,
+			callback: _callback
+		});
 	}
 };
 

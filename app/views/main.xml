@@ -2,9 +2,11 @@
 	<Window id="main" class="container">
     <Require type="widget" src="me.wslong.tiNavbar" id="navbar"/>
     <View class="wrapper">
-      <Label id="label1" onClick="doClick1">Normal Window</Label>
-      <Label id="label2" onClick="doClick2">Text Action Window</Label>
-  		<Label id="label3" onClick="doClick3">Try to change the Window title</Label>
+      <Label onClick="showBack">Show Back</Label>
+      <Label onClick="showNext">Show Next</Label>
+      <Label onClick="showMenu">Show Menu</Label>
+      <Label onClick="showSettings">Show Settings</Label>
+  		<Label onClick="showAction">Show Action</Label>
     </View>
 	</Window>
 </Alloy>

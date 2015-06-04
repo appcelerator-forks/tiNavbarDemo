@@ -1,8 +1,8 @@
 <Alloy>
-  <Window id="normal" class="container">
+  <Window id="showBack" class="container">
     <Require type="widget" src="me.wslong.tiNavbar" id="navbar"/>
     <View class="innerContainerTop">
-      <Label>it's normal window</Label>
+      <Label>SHOW BACK</Label>
     </View>
   </Window>
 </Alloy>
